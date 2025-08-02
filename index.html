@@ -1,0 +1,117 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>ACTools API</title>
+  <meta name="description" content="ACTools">
+
+  <meta property="og:title" content="ACTools API">
+  <meta property="og:description" content="ACTools">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="app">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-content">
+          <div class="navbar-left">
+            <div class="logo">
+              <span class="logo-text">ACTools</span>
+              <span class="version-badge">v2.5</span>
+            </div>
+<div class="nav-links">
+              <a href="/" class="nav-link">HOME</a>
+              <a href="api" class="nav-link">ACTOOLS</a>
+    <a href="jsons" class="nav-link">JSONS</a>
+            </div>
+          </div>
+          <div class="navbar-right">
+            <a href="https://discord.gg/7VczAgNqRd" target="_blank" rel="noopener noreferrer" class="discord-button desktop-only">
+              <i class="fab fa-discord"></i>
+              Join Discord
+            </a>
+            <button class="menu-toggle" id="mobileMenuToggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-links">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="api.html" class="mobile-nav-link active">API</a>
+        <a href="https://discord.gg/7VczAgNqRd" target="_blank" rel="noopener noreferrer" class="discord-button mobile-discord">
+          <i class="fab fa-discord"></i>
+          Join Discord
+        </a>
+      </div>
+    </div>
+
+    <main class="main">
+      <section class="api-coming-soon">
+        <div class="container">
+          <h1 class="page-title">Hi</h1>
+          <p class="api-subtitle">your here cause you either had your session expire or you failed to do the steps correctly.</p>
+          <a href="/" class="back-button">
+            <i class="fas fa-arrow-left"></i>
+            Back to Home
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-left">
+            <div class="logo">
+              <span class="logo-text">ACTools</span>
+              <span class="version-badge">v2.5</span>
+            </div>
+            <p class="footer-byline">by XModding</p>
+          </div>
+          <div class="footer-links">
+            <a href="https://www.youtube.com/channel/UCPcqz-4PeFyDUlvVneYu7Jg" target="_blank" rel="noopener noreferrer" class="footer-link">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://discord.gg/7VczAgNqRd" target="_blank" rel="noopener noreferrer" class="footer-link">
+              <i class="fab fa-discord"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          � <span id="currentYear"></span> XModding. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    if (mobileMenuToggle && mobileMenu) {
+      mobileMenuToggle.addEventListener('click', function() {
+        mobileMenu.classList.toggle('active');
+        
+        const icon = mobileMenuToggle.querySelector('i');
+        if (icon.classList.contains('fa-bars')) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-times');
+        } else {
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+      });
+    }
+  </script>
+
+</body></html>
